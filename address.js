@@ -33,7 +33,6 @@ const get_address = async() => {
                             filePath: './file.xlsx'
                         }).catch(err => console.log(err));
                     }
-                    console.log(charset[i] + charset[j] + charset[k] + " : " + data.length)
                 }catch{
                     continue;
                 }

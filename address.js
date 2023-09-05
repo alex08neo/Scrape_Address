@@ -26,7 +26,12 @@ const get_address = async() => {
                 try{
                     let addresses = [];
                     const address_response = await axios.get(url + charset[i] + charset[j] + charset[k]);
-                    address_response.data.data.map(e => {if(e.postal_code != null && e.number != null && e.street != null){addresses.push([{value:e.number + " " + e.street + ", Singapore"}, {value:e.postal_code}])}});
+                    address_response.data.data.map(e => 
+                        {
+                            if(e.postal_code != null && e.number != null && e.street != null){
+                                addresses.push([{value:e.number + " " + e.street + ", Singapore"}, {value:e.postal_code}])
+                            }
+                        });
                     if(addresses.length > 0){
                         data = data.concat(addresses);
                         await writeXlsxFile(data, {

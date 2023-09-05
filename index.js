@@ -11,10 +11,6 @@ const get_state = async() => {
     const state = state_response.data.results;//["AU-VIC", "AU-NSW", "AU-QLD"];
     console.log(state);
     for(let i = 0; i < state.length; i ++){
-        /*let state_name = "";
-        let state_split = state[i].split(" ");
-        if(state_split.length == 1) state_name = state[i];
-        else{    state_split.map(e => state_name += e[0]);}*/
         let state_name = state[i];
         state_name = state_name.replaceAll(" ", "%20");
         try{

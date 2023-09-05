@@ -8,7 +8,7 @@ let url_getpostalcodesbystate = "https://app.zipcodebase.com/api/v1/code/state?c
 let postal_code = [];
 const get_state = async() => {
     const state_response = await axios.get(url_getstatebycountrycode);
-    const state = state_response.data.results;//["AU-VIC", "AU-NSW", "AU-QLD"];
+    const state = state_response.data.results;
     console.log(state);
     for(let i = 0; i < state.length; i ++){
         let state_name = state[i];

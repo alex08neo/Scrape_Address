@@ -30,7 +30,7 @@ const get_address = async() => {
                     if(addresses.length > 0){
                         data = data.concat(addresses);
                         await writeXlsxFile(data, {
-                            filePath: './file.xlsx'
+                            filePath: './address.xlsx'
                         }).catch(err => console.log(err));
                     }
                 }catch{

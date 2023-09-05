@@ -11,11 +11,13 @@ const HEADER_ROW = [
       fontWeight: 'bold'
     },
 ]
+
 let data = [];
 data.push(HEADER_ROW);
 const country = "SG";
 const access_key = "34dc45b986d65d01d7ce4f304cd77bd9";
 let url = "http://api.positionstack.com/v1/forward?access_key=" + access_key + "&country=" + country + "&query=";
+
 const get_address = async() => {
     const charset = "abcdefghijklmnopqrstuvwxuzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     for(let i = 10; i < charset.length; i ++){

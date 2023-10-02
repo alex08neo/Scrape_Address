@@ -14,8 +14,8 @@ const HEADER_ROW = [
 
 let data = [];
 data.push(HEADER_ROW);
-const country = "SG";
 const access_key = "34dc45b986d65d01d7ce4f304cd77bd9";
+const country = "SG";
 let url = "http://api.positionstack.com/v1/forward?access_key=" + access_key + "&country=" + country + "&query=";
 
 const get_address = async() => {

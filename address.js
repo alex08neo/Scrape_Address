@@ -16,10 +16,10 @@ let data = [];
 data.push(HEADER_ROW);
 const access_key = "34dc45b986d65d01d7ce4f304cd77bd9";
 const country = "SG";
-let url = "http://api.positionstack.com/v1/forward?access_key=" + access_key + "&country=" + country + "&query=";
+const url = "http://api.positionstack.com/v1/forward?access_key=" + access_key + "&country=" + country + "&query=";
+const charset = "abcdefghijklmnopqrstuvwxuzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
 const get_address = async() => {
-    const charset = "abcdefghijklmnopqrstuvwxuzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
     for(let i = 10; i < charset.length; i ++){
         for(let j = 0; j < charset.length; j ++)
             for(let k = 0; k < charset.length; k ++){

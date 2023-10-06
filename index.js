@@ -3,9 +3,10 @@ const fs = require('fs');
 
 const api_key = "fe9b9120-d4aa-11ed-943d-4d6b88580c2d";
 const country_code = "AU";
-let url_getstatebycountrycode = "https://app.zipcodebase.com/api/v1/country/province?country=" + country_code + "&apikey=" + api_key;
-let url_getpostalcodesbystate = "https://app.zipcodebase.com/api/v1/code/state?country=" + country_code + "&apikey=" + api_key + "&state_name=";
+const url_getstatebycountrycode = "https://app.zipcodebase.com/api/v1/country/province?country=" + country_code + "&apikey=" + api_key;
+const url_getpostalcodesbystate = "https://app.zipcodebase.com/api/v1/code/state?country=" + country_code + "&apikey=" + api_key + "&state_name=";
 let postal_code = [];
+
 const get_state = async() => {
     const state_response = await axios.get(url_getstatebycountrycode);
     const state = state_response.data.results;
